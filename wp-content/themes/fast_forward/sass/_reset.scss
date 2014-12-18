@@ -1,0 +1,8 @@
+ul{
+	@extend %reset-spacing;
+	@extend %no-list;
+}
+p{
+	@extend %reset-spacing;
+	margin-bottom:20px;
+}

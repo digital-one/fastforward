@@ -1,0 +1,123 @@
+.gform_wrapper{
+	display:block;
+	.gform_heading{
+
+	}
+	.validation_error{
+		background-color: $yellow;
+		color: #1f242b;
+		font-weight:600;
+		font-style: italic;
+		padding:5px;
+		margin-bottom: 10px;
+	}
+	.gform_body{
+		li{
+			margin-bottom: 5px;
+			float: left;
+			width: 100%;
+			&.half{
+				width: 49%;
+				input{
+					width: 100%;
+				}
+				@media screen and (max-width: $break-medium) {
+					width:100%;
+				}
+			}
+			&.right{
+				float:right;
+			}
+			&.gfield_price{
+				select{
+					width: 15%
+				}
+				label{
+					@include font-size(14);
+				}
+			}
+			&.gfield_html{
+				margin-top: 20px;
+			}
+			&.product_title_price, &.product_qty{
+				background-color:rgba(255,255,255,.2);
+				padding: 5px 8px 2px;
+				margin-bottom: 0;
+			}
+			&.product_title_price{
+				@include border-radiuses(5px,5px,0,0);
+				padding: 5px 5px 0 !important;
+				label{
+					font-weight: 600;
+					@include font-size(16);
+				}
+			}
+			&.product_qty{
+				margin-bottom: 10px;
+				padding: 5px 5px 5px !important;
+				@include border-radiuses(0,0,5px,5px);
+				label{
+					@include font-size(12);
+					display: inline-block;
+					width: auto;
+					float:left;
+					height:38px;
+					line-height: 38px;
+					margin-right: 10px;
+				}
+			}
+			&.gfield_error{
+				input,select{
+					background-color: $yellow;
+				}
+			}
+			&.total{
+				margin-bottom: 20px;
+				label, .ginput_total{
+					display: inline-block;
+					float: left;
+					margin-right: 6px;
+					@include font-size(16);
+					font-weight: 600;
+				}
+			}
+			label{
+				display: block;
+				@include font-size(12);
+				margin-bottom: 2px;
+				span.gfield_required{
+					color: $yellow;
+				}
+			}
+			.validation_message{
+				display: block;
+				@include font-size(12);
+				color:$yellow;
+			}
+			.ginput_quantity_label{
+				display: block;
+			}
+		}
+	}
+	.gform_footer{
+		margin: 20px 0 0;
+		float: left;
+	}
+	.gform_button{
+		@include border-radius(7px);
+		background-color: white;
+		border:none;
+		height:40px;
+		font-weight: 600;
+		line-height: 40px;
+		padding:0 10px;
+		color:$blue;
+		text-transform: uppercase;
+		@include font-size(18);
+		margin-right: 20px;
+	}
+}
+
+.chosen-container, .ginput_counter{
+	display: none !important;
+}

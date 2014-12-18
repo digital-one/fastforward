@@ -1,0 +1,11 @@
+@mixin inline-menu(){
+	li,a{
+		float: left;
+	}
+	li{
+		display: inline;
+		a{
+			display: block;
+		}
+	}
+}

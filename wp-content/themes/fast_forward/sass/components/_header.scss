@@ -1,0 +1,36 @@
+#header{
+	background:black url('../images/header-bg.jpg') center top no-repeat;
+	height:96px;
+	@extend %full-width;
+	@extend .clearfix;
+	#home-link{
+		width: 261px;
+		height: 53px;
+		float: left;
+		margin:21px 0 0;
+		@media screen and (max-width: $break-small) {
+			float:none;
+			margin:21px auto 0;
+		}
+	}
+	nav.amazon{
+		@include inline-menu;
+		@include abs-pos(30px,130px,auto,auto);
+		@media screen and (max-width: $break-medium) {
+			display:none;
+		}
+		li{
+			margin-right: 15px;
+		}
+		a{
+			width: 131px;
+			height: 38px;
+			display: inline-block;
+			position: relative;
+			img{
+				width:auto;
+				height: 100%;
+			}
+		}
+	}
+}

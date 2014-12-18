@@ -1,0 +1,36 @@
+//font face
+
+@font-face {
+    font-family: 'ocr-a_regular-webfont';
+    src: url('../fonts/ocr-a_regular-webfont.eot');
+    src: url('../fonts/ocr-a_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ocr-a_regular-webfont.woff') format('woff'),
+         url('../fonts/ocr-a_regular-webfont.ttf') format('truetype'),
+         url('../fonts/ocr-a_regular-webfont.svg#ocr-a_regular-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//neat overrides
+
+$max-width: 974px; //overide neat outer container width
+$visual-grid: false; 
+
+//colours
+
+$blue: #094080;
+$light-blue:#28a9e1;
+$yellow: #fff300;
+$grey: #6d6e71;
+$light-grey: #f4f4f5;
+//font declarations
+
+
+//fonts
+$open_sans: 'Open Sans', sans-serif;
+$ocra: 'ocr-a_regular-webfont', sans-serif;
+
+//break points
+$break-small: 679px;
+$break-medium: 768px;
+$break-large: 999px;

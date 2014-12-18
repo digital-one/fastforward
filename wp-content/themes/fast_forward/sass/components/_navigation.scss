@@ -1,0 +1,83 @@
+#nav{
+	background-color: white;
+	@include centered-menu;
+	overflow:hidden;
+	.container{
+		position: relative;
+		@media screen and (max-width: $break-large) {
+				padding-top:50px;
+		}
+	}
+	@media screen and (max-width: $break-large) {
+		height:auto;
+		overflow: visible;
+
+	}
+	ul{
+		margin:0;
+		@media screen and (max-width: $break-large) {
+		display:none;
+		background-color: white;
+		left:auto;
+		width:100%;
+		z-index: 9998;
+		padding-bottom:10px;
+
+		}
+	}
+	@include wp-current-page-links{
+		background:url('../images/nav-link-keyline.jpg') center bottom repeat-x;
+		color: $light-blue;
+		@media screen and (max-width: $break-large) {
+			background: none;
+			background-color: $light-blue;
+			color: white;
+		}
+	}
+	li{
+		margin: 10px 12px 12px;
+		@media screen and (max-width: $break-large) {
+			right: auto !important;
+			float: none;
+			width:100%;
+			margin:0;
+		}
+	}
+	a{
+		font-family: $ocra;
+		@include font-size(14);
+		padding:8px 10px;
+		display: block;
+		&:link,&:visited{
+			color: black;
+		}
+		&:hover,&:active{
+			color: $light-blue;
+			@media screen and (max-width: $break-large) {
+				background-color: $light-blue;
+				color: white;
+			}
+		}
+		@media screen and (max-width: $break-large) {
+			text-align: left;
+			padding:8px 15px;
+			@include font-size(16);
+		}
+	}
+	a#mobile-menu{
+		width:32px;
+		height:32px;
+		display: block;
+		@include abs-pos(9px,10px,auto,auto);
+		background:url('../images/mobile-menu.svg') center center no-repeat;
+		background-size: 32px 32px;
+		cursor: pointer;
+		z-index: 9999;
+		@extend %ir;
+		display:none;
+		@media screen and (max-width: $break-large) {
+			display:block;
+		}
+	}
+
+}

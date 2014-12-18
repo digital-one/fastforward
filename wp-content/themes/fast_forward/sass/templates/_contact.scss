@@ -1,0 +1,38 @@
+.contact{
+	.column{
+		@include span-columns(5);
+		@media screen and (max-width: $break-small) {
+			@include span-columns(12);
+			margin-bottom: 20px;
+		}
+		background-color:#ccc;
+		text-align:left;
+		h3{
+			@include font-size(16);
+			span{
+				display: inline-block;
+				border-bottom: 1px solid #000;
+				line-height: 100%;
+			}
+		}
+		p{
+			@include font-size(14);
+			line-height: 110%;
+			margin-bottom: 15px;
+		}
+		&.right{
+			@include span-columns(7);
+			@media screen and (max-width: $break-small) {
+				@include span-columns(12);
+			}
+			@include omega;
+
+		}
+	}
+	#map{
+		@extend %full-width;
+		height: 250px;
+		display: block;
+		background-color: #fff;
+	}
+}

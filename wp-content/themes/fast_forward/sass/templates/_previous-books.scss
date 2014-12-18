@@ -1,0 +1,112 @@
+#banner{
+	h1{
+		@include font-size(32);
+		font-style: italic;
+		font-weight: 600;
+		color: #fff200;
+		line-height: 120%;
+		@media screen and (max-width: $break-medium) {
+			@include font-size(21);
+		}
+	}
+	aside{
+		@include span-columns(5);
+		//padding:30px 40px 0 40px;
+		padding: 2% 6% 0 3%;
+		@include font-size(16);
+		color: white;
+		ul{
+			padding-right: 80px;
+			line-height: 110%;
+			li{
+				padding-left:10px;
+				position: relative;
+				margin-bottom: 6px;
+				&:before{
+					content:"";
+					width:4px;
+					height:4px;
+					display: block;
+					background:url('../images/bullet-white.svg') center center no-repeat;
+					background-size: 4px 4px;
+					@include abs-pos(8px,auto,auto,0);
+				}
+			}
+		}
+		@media screen and (max-width: $break-medium) {
+			padding: 2% 6% 0 1%;
+			@include font-size(14);
+		}
+		@media screen and (max-width: $break-small) {
+			display: none;
+		}
+	}
+}
+#previous-books{
+	article{
+		.wrap{
+			@extend %clearfix;
+		}
+		.alpha{
+			@include span-columns(9); 
+			float:left;
+			@media screen and (max-width: $break-medium) {
+				padding-right: 30px;
+			}
+			@media screen and (max-width: $break-small) {
+				@include span-columns(12); 
+				padding:0;
+			}
+		}
+		figure{
+			@include span-columns(3);
+			float:right !important;
+			margin:0; 
+			@media screen and (max-width: $break-small) {
+				@include span-columns(12); 
+				text-align: center;
+			}
+			img{
+				float: right;
+				@media screen and (max-width: $break-small) {
+					float: none;
+					margin:0 auto 20px;
+				}
+			}
+		}
+		ul.retailers{
+			@extend %clearfix;
+			li{
+				display: inline-block;
+				float: left;
+				width: auto;
+				margin-right: 60px;
+				@media screen and (max-width: $break-small) {
+					margin-right: 15px;
+				}
+				a{
+					display: block;
+					width:171px;
+					height:37px;
+					@media screen and (max-width: $break-small) {
+						width:131px;
+						height: auto;
+					}
+					&.amazon-com{
+						margin-top: 4px;
+						width:159px;
+						height:33px;
+						@media screen and (max-width: $break-small) {
+							width:131px;
+							height: auto;
+							margin-top:2px;
+						}
+					}
+					img{
+						@include fit-grid(width);
+					}
+				}
+			}
+		}
+	}
+}

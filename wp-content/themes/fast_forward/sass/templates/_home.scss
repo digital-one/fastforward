@@ -1,0 +1,241 @@
+#home{
+	#slider{
+		h2{
+			font-style: italic;
+			font-weight: 600;
+			color: #fff200;
+			@include font-size(28);
+			margin-bottom: 30px;
+			line-height: 110%;
+		}
+		.slide{
+			text-align: center;
+			padding: 40px 0 0;
+			position: relative;
+			figure{
+				width: 50%;
+				margin:0 auto;
+				@media screen and (max-width: $break-medium) {
+					width:60%;
+				}
+				@media screen and (max-width: $break-small) {
+					width:98%;
+				}
+			}
+			.video-wrap{
+				@include responsive-video;
+				background-color: $grey;
+				iframe{
+					z-index: 9999;
+				}
+			}
+		}
+	}
+}
+
+#main{
+	@include bg-cover;
+	padding:30px 0 0;
+	aside{
+		float:right !important;
+		@include span-columns(4);
+		margin:0 !important;
+		@media screen and (max-width: $break-medium) {
+			@include span-columns(12);
+			text-align: center;
+			padding-bottom: 10px;
+		}
+		img{
+			@include fit-grid(width);
+			@media screen and (max-width: $break-medium) {
+				max-width:50%;
+				margin:0 auto;
+
+
+			}
+		}
+	}
+}
+
+footer#slider-footer{
+	background:#181b20 url('../images/divide.jpg') left bottom repeat-x;
+	text-align:center;
+	//margin-bottom:20px;
+	@extend .clearfix;
+	h3{
+		display: inline-block;
+		@include font-size(28);
+		font-style: italic;
+		margin:0 auto;
+		color: white;
+		display: table;
+		height:100px;
+		width:55%;
+		@media screen and (max-width: $break-medium) {
+			@include font-size(26);
+			width:50%;
+			padding-left:10px;
+			line-height: 110%;
+		}
+		@media screen and (max-width: $break-small) {
+			width:100%;
+			@include font-size(22);
+			margin-bottom: 70px;
+			height: 80px;
+		}
+		span{
+			display: table-cell;
+			height:100%;
+			width:100%;
+			vertical-align: middle;
+		}
+	}
+	a.issuu{
+		display:block;
+		width:160px;
+		height:50px;
+		float: left;
+		@include abs-pos(25px,auto,auto,10px);
+		@media screen and (max-width: $break-medium) {
+			@include abs-pos(25px,auto,auto,15px);	 
+		}
+		@media screen and (max-width: $break-small) {
+			@include abs-pos(80px,auto,auto,10px);
+			width:130px;
+			height: auto;
+		}
+	}
+	a.button{
+		float: right;
+		color: white;
+		font-weight: 400;
+		@include abs-pos(26px,10px,auto,auto);
+		@media screen and (max-width: $break-medium) {
+			@include abs-pos(25px,15px,auto,auto);
+		}
+		@media screen and (max-width: $break-small) {
+			@include abs-pos(80px,10px,auto,auto);
+			@include font-size(16);
+		}
+		&:link,&:visited{
+			background-color:#2499da;
+		}
+		&:hover,&:active{
+			background-color:darken(#2499da,10);
+		}
+	}
+}
+#order-form{
+	@extend %clearfix;
+	background-image:url('../images/bg.jpg');
+	@include bg-cover;
+	width:100%;
+	display: block;
+	height: auto;
+	color: white;
+	padding: 40px;
+	margin-bottom: 15px;
+	h2,h3,h4{
+		color: #fff200;
+	}
+	@media screen and (max-width: $break-small) {
+		padding: 10px 10px 30px;
+	}
+}
+
+#latest-news{
+	ul{
+		@extend %clearfix;
+	}
+	li{
+		@include span-columns(4);
+		@include omega(3n);
+		@media screen and (max-width: $break-small) {
+			@include span-columns(12);
+		}
+		figure{
+			@include fixed-ratio(100%,66.66%,img);
+			background-color: $grey;
+			margin:0 0 20px;
+			border:1px solid $light-grey;
+		}
+		a{
+			color: $grey;
+			span.read-more{
+				color: black;
+			}
+			&:hover,&:active{
+				h4{
+					color: $light-blue;
+				}
+				span.read-more{
+					color: $light-blue;
+				}
+			}
+
+		}
+		header{
+			width:100%;
+			@extend .clearfix;
+			display: block;
+			position: relative;
+			margin-bottom: 20px;
+			time{
+				display: inline-block;
+				width:20%;
+				background-color: $light-grey;
+				overflow:hidden;
+				position: relative;
+				float: left;
+				text-align: center;
+				&:after{
+					content:"";
+					display: block;
+					padding-top:100%;
+				}
+				div{
+					@include abs-pos(0,0,auto,auto);
+					width:100%;
+					height:100%;
+					span{
+						@include vertical-align;
+						width:100%;
+						text-align: center;
+						display: block;
+						@include font-size(14);
+						line-height: 100%;
+						color: $grey;
+						em{
+							display: block;
+							font-style: normal;
+							@include font-size(27);
+							margin-bottom: 6px;
+							@media screen and (max-width: $break-medium) {
+								@include font-size(22);
+							}
+
+						}
+					}
+				}
+			}
+			h4{
+				@include transition (all 0.1s ease-in-out);
+				font-family: $open_sans;
+				display: block;
+				padding-top:10px;
+				width: 76%;
+				font-weight: 700;
+				font-style: normal;
+				@include font-size(19);
+				color: black;
+				text-transform: uppercase;
+				margin-bottom: 0;
+				float:right;
+				@media screen and (max-width: $break-medium) {
+					@include font-size(16);
+					padding-top: 4px;
+				}
+			}
+		}
+	}
+}

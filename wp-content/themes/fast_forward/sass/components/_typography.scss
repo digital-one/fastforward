@@ -1,0 +1,57 @@
+
+h1,h2,h3,h4{
+	font-family:$open_sans;
+	font-weight:700;
+	@include font-size(22);
+	color: black;
+	margin: 0 0 20px;
+}
+h2,h3,h4{
+	@include font-size(17);
+}
+p,ul{
+	margin-bottom:20px;
+	.big &{
+		font-style:italic;
+		font-weight:600;
+		@include font-size(18);
+		line-height: 130%;
+	}
+}
+.bullet-list{
+	ul{
+		li{
+			padding-left: 12px;
+			position:relative;
+			margin-bottom: 7px;
+			&:before{
+				content:"";
+				width:6px;
+				height:7px;
+				@include abs-pos(6px,auto,auto,0);
+				background:url('../images/bullet.jpg') center center no-repeat;
+			}
+		}
+		&.inline{
+			width:70%;
+			@extend %clearfix;
+			li{
+				display: inline;
+				float: left;
+				width:50%;
+			}
+		}
+	}
+}
+strong{
+	font-weight:600;
+}
+a{
+	@include transition (all 0.1s ease-in-out);
+	&:link,&:visited{
+		color:$light-blue;
+	}
+	&:hover,&:active{
+		color: black;
+	}
+}

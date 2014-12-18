@@ -1,0 +1,138 @@
+//slick defaults
+.slick-slider{
+	position: relative;
+	margin-bottom:0 !important;
+	button{
+		&.slick-prev,&.slick-next{
+			border: none;
+			width:51px;
+			height:51px;
+			display: block;
+			@include abs-pos(50%,auto,auto,20px);
+			margin-top:-25px;
+			background-size: 100% auto;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-image: url('../images/button-prev.svg');
+			@extend %ir;
+			background-color: transparent;
+		}
+		&.slick-next{
+			@include abs-pos(50%,20px,auto,auto);
+			background-image: url('../images/button-next.svg');
+		}
+	}
+}
+.slick-list,.slick-track{
+	height:100% !important;
+}
+.slick-dots{
+	position:relative;
+	width:auto !important;
+	display: inline-block;
+	bottom:40px;
+	@include centered-menu;
+	button{
+		display: block;
+		border:none;
+		width:11px;
+		height:11px;
+		padding:0;
+		margin:0;
+		background-color: white;
+		@include border-radius(50%);
+		@extend %ir; 
+	}
+	li{
+		margin:0 3px;
+		display: inline-block;
+		float:left;
+		&.slick-active{
+			button{
+				background-color: $light-blue;
+			}
+		}
+	}
+	#slider &{
+		display: none !important;
+	}	
+}
+#slider,.slide{
+	@extend %clearfix;
+	height:330px;
+	@media screen and (max-width: $break-small) {
+		height:112px;
+	}
+	#home &{
+		height:450px;
+	}
+	width:100%;
+	display:block;
+}
+#slider{
+	z-index:9999;
+	position: relative;
+}
+.slide{
+	@media screen and (min-width: $break-small+1) {
+		@include bg-cover; 
+	}
+	@media screen and (max-width: $break-small) {
+		background-size:100% auto;
+
+	}
+	#home &{
+		@include bg-cover; 
+	}
+}
+
+// testimonials slider
+
+#testimonials-slider{
+	background-image:url('../images/bg-2.jpg');
+	@include bg-cover;
+	height:460px;
+	width:100%;
+	text-align:center;
+	position: relative;
+	.slick-prev,.slick-next{
+		display: none !important;
+	}
+	.slide{
+		text-align: center;
+		height:100%;
+		@media screen and (max-width: $break-small) {
+			padding: 0 20px;
+		}
+		blockquote{
+			margin:0;
+			@include vertical-align;
+			p{
+				font-style: italic;
+				@include font-size(28);
+				line-height: 130%;
+				margin:0 auto;
+				padding:0 0 50px;
+				width: 60%;
+				color: white;
+				@media screen and (max-width: $break-small) {
+					width:100%;
+					@include font-size(18);
+				}
+				background: url('../images/ff-icons.svg') center bottom no-repeat;
+				background-size:65px 17px;
+			}
+			footer{
+				@include font-size(16);
+				padding:30px 0 0;
+				font-style: italic;
+				font-weight: 400;
+				color: white;
+				strong{
+					font-style: normal;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}

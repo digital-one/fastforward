@@ -1,0 +1,10 @@
+.container{
+	@include outer-container;
+	position: relative;
+	@media screen and (max-width: $break-large) {
+		padding:0 16px;
+	}
+	@media screen and (max-width: $break-small) {
+		padding:0 10px;
+	}
+}

@@ -1,0 +1,21 @@
+html{
+	font-size: 62.5%;
+	@extend %reset-spacing;
+}
+body{
+	font-family: $open_sans;
+	font-weight:400;
+	font-style:normal;
+	@include font-size(14);
+	line-height: 140%;
+	color: $grey;
+	background-color:#1f242b;
+}
+a{
+	&:link, &:visited{
+	text-decoration: none;
+	}
+	&:hover, &:active{
+
+	}
+}

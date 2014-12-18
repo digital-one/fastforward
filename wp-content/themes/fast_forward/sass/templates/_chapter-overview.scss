@@ -1,0 +1,62 @@
+#chapter-overview{
+	dl,dd{
+		margin: 0;
+	}
+	dt{
+		margin-bottom: 20px;
+		@extend %clearfix;
+		em,span{
+			display: inline-block;
+			float:left;
+			line-height:30px;
+			height: 32px;
+			@include font-size(19);
+			font-weight: 700;
+			color: black;
+		}
+		em{
+			font-style: normal;
+			text-align: center;
+			width:32px;
+			color: white;
+			background-color: #000;
+			@include font-size(19);
+			margin-right: 20px;
+			background-color: #3777bc;
+		}
+		@media screen and (max-width: $break-small) {
+			em{
+				margin-bottom: 5px;
+			}
+			span{
+				height: auto;
+				line-height: 120%;
+				@include font-size(17);
+			}
+		}
+		&.chapter-2 em{
+			background-color: #69c17e;
+		}
+		&.chapter-3 em{
+			background-color: #a35ca4;
+		}
+		&.chapter-4 em{
+			background-color: #be1e2d;
+		}
+		&.chapter-5 em{
+			background-color: #27aae1;
+		}
+		&.chapter-6 em{
+			background-color: #dab128;
+		}
+		&.chapter-7 em{
+			background-color: #cb1d6b;
+		}
+		&.chapter-8 em{
+			background-color: #f16022;
+		}
+	}
+	dd{
+		margin-bottom: 30px;
+	}
+} 
